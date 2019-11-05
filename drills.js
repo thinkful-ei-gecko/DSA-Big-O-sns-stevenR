@@ -10,7 +10,17 @@
 7.1 O(n) - calculates the fib sequence numbers up to the number that was input.
 7.2 O(n) - linear time. Time complexity scales lienarly with the size of the array. If the array is 5, 5 operations are run, 10, 10 operations are run, etc.
 8. O(log(n)) - logarithmic time. Cutting data set size in half each time through the loop.
+
+9. O(1) - constant time - we are returning a value from the array - no iteration/loops/what have you. 
+10.1 The algorithm returns true if number is prime, false otherwise. 
+10.2 O(n) - linear time - we look at and work with all values from 2 to the number input
 */
+
+// returns false if num is less than 2 or if num is decimal
+// returns false if num is divisible by i - any num divis by 2 is false
+// return true if num is never divisible by i
+
+
 
 function efficientSearch(array, item) {  // Item is item that we are searching for, Array is where we are searching
   let minIndex = 0;  // start at 0 for our array
