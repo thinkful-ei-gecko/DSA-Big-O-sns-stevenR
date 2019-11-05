@@ -9,7 +9,7 @@
 6. O(n^2) - polynomial time. We are running j operations on i values, therefore time compexity is j*i, otherwise known as n^2
 7.1 O(n) - calculates the fib sequence numbers up to the number that was input.
 7.2 O(n) - linear time. Time complexity scales lienarly with the size of the array. If the array is 5, 5 operations are run, 10, 10 operations are run, etc.
-
+8. O(log(n)) - logarithmic time. Cutting data set size in half each time through the loop.
 */
 
 function efficientSearch(array, item) {  // Item is item that we are searching for, Array is where we are searching
@@ -18,11 +18,11 @@ function efficientSearch(array, item) {  // Item is item that we are searching f
   let currentIndex;  // initializing current index to be used at a later time.
   let currentElement;  // inializaing current element to be used at a later time.
 
-  while (minIndex <= maxIndex) { //
-    currentIndex = Math.floor((minIndex + maxIndex) / 2);  //
-    currentElement = array[currentIndex];  //
+  while (minIndex <= maxIndex) { // looping while minimum is less than max Index
+    currentIndex = Math.floor((minIndex + maxIndex) / 2);  // sets current index to array midpoint
+    currentElement = array[currentIndex];  // sets value for current element to midpoint item
 
-    if (currentElement < item) {  //
+    if (currentElement < item) {  // checking if midpoint is less than item
       minIndex = currentIndex + 1;  //
     } else if (currentElement > item) {  //
       maxIndex = currentIndex - 1; //
