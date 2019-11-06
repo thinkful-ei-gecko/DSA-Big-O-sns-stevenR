@@ -20,7 +20,28 @@
 // returns false if num is divisible by i - any num divis by 2 is false
 // return true if num is never divisible by i
 
+let A = [5, 4, 3, 2, 1];
+let B = [];
+let C = [];
 
+const tower = (numDiscs, start, goal, temp) => {
+    if (numDiscs > 0) {
+        tower(numDiscs - 1, start, temp, goal)
+        goal.push(start.pop())
+        console.log(`A: ${A}, B: ${B}, C: ${C}`)
+        tower(numDiscs - 1, temp, goal, start)
+    }
+
+}
+
+tower(5, A, C, B)
+console.log(C)
+
+/*
+
+1. A: 5,4, B: , C: 3,2,1
+2. 7, 15, 31 (moves can be calculated as n^2 - 1)
+1. runtime is O(n^2)
 
 function efficientSearch(array, item) {  // Item is item that we are searching for, Array is where we are searching
   let minIndex = 0;  // start at 0 for our array
